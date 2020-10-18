@@ -2,8 +2,6 @@ service: ontimelog-scrapper-lambda
 app: ontime-scrapper
 org: roniemeque
 
-frameworkVersion: "1"
-
 plugins:
   - serverless-plugin-typescript
   - serverless-offline
@@ -13,6 +11,9 @@ provider:
   name: aws
   runtime: nodejs12.x
   region: us-east-1
+  environment:
+    IFTTT_KEY: ${env:IFTTT_KEY}
+    FAUNA_KEY: ${env:FAUNA_KEY}
 
 functions:
   fetchStatus:
