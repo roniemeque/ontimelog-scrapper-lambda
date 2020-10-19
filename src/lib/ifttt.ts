@@ -16,8 +16,9 @@ export const sendToPhone = async (time?: string, message?: string) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        value1: time,
-        value2: message,
+        value1: `📦 Encomenda`,
+        value2: `${time}: ${message}`,
+        value3: `https://ontime.sinclog.com.br/Rastreamentos/Rastreamento`,
       }),
     }
   );
